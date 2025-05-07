@@ -7,7 +7,6 @@ class Netcoredbg < Formula
   head "https://github.com/Samsung/netcoredbg.git", branch: "master"
 
   depends_on "cmake" => :build
-  depends_on "dotnet" => :build
 
   def install
     mkdir "build" do
