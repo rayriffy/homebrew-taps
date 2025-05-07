@@ -10,7 +10,7 @@ brew tap rayriffy/taps
 netcoredbg
 ---
 
-This is used as an alternative to `vsdbg` which is exclusive to VS Code, and Visual Studio. Meaning `vsdbg` will be unusable in VS Code forks (i.e. Cursor).
+Open-source debugger for CoreCLR ([source](https://github.com/Samsung/netcoredbg)). This is used as an alternative to `vsdbg` which is exclusive to VS Code, and Visual Studio. Meaning `vsdbg` will be unusable in VS Code forks (i.e. Cursor).
 
 ```
 brew install netcoredbg
