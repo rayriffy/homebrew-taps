@@ -4,6 +4,7 @@ class Netcoredbg < Formula
   url "https://github.com/Samsung/netcoredbg/archive/refs/tags/3.1.2-1054.tar.gz"
   sha256 "2699f6dd0275c5943339183fc5c7e5c0cdfe77a23388a9fdab3f2c6929ff40a7"
   license "MIT"
+  head "https://github.com/Samsung/netcoredbg.git", branch: "master"
 
   depends_on "cmake" => :build
   depends_on "dotnet" => :build
