@@ -1,8 +1,11 @@
 class Netcoredbg < Formula
   desc "The NetCoreDbg debugger implements GDB/MI and VSCode Debug Adapter Protocol in a unified framework, allowing the debugging of .NET apps under the .NET Core runtime as well as facilitating debugging from the command line (such as in GDB)."
   homepage "https://github.com/Samsung/netcoredbg"
+
+  version "3.1.2"
   url "https://github.com/Samsung/netcoredbg/archive/refs/tags/3.1.2-1054.tar.gz"
   sha256 "2699f6dd0275c5943339183fc5c7e5c0cdfe77a23388a9fdab3f2c6929ff40a7"
+
   license "MIT"
   head "https://github.com/Samsung/netcoredbg.git", branch: "master"
 
