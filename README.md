@@ -1,22 +1,20 @@
-Riffy's Homebrew Taps
-===
+# Riffy's Homebrew Taps
 
-Collection of personalized Homebrew Taps. Add into your brew by running
+A collection of personalized Homebrew Taps. Add to your Homebrew by running:
 
 ```
 brew tap rayriffy/taps
 ```
 
-netcoredbg
----
+## netcoredbg
 
-Open-source debugger for CoreCLR ([source](https://github.com/Samsung/netcoredbg)). This is used as an alternative to `vsdbg` which is exclusive to VS Code, and Visual Studio. Meaning `vsdbg` will be unusable in VS Code forks (i.e. Cursor).
+An open-source debugger for CoreCLR ([source](https://github.com/Samsung/netcoredbg)). This serves as an alternative to `vsdbg`, which is exclusive to VS Code and Visual Studio. This means `vsdbg` cannot be used in VS Code forks (such as Cursor).
 
 ```
 brew install netcoredbg
 ```
 
-This process might take some time (~10-15 min) to compile, but after completion it will be available at `/opt/homebrew/Cellar/netcoredbg/3.1.2/netcoredbg`. Then in `launch.json` in your project, add additional config to tell IDE which debugger to use.
+The compilation process may take approximately 10-15 minutes. After completion, the debugger will be available at `/opt/homebrew/Cellar/netcoredbg/3.1.2/netcoredbg`. To use it, add the following configuration to the `launch.json` file in your project:
 
 ```json
 "pipeTransport": {
@@ -29,4 +27,4 @@ This process might take some time (~10-15 min) to compile, but after completion 
 }
 ```
 
-Enjoy debugging without DRM
+Now you can debug your .NET projects without proprietary restrictions.
