@@ -20,7 +20,7 @@ class DictionaryGenerator < Formula
     # Then build dictionary_generator using Bazel
     # Note: Bazel 8 disables WORKSPACE by default, but brotli still uses it
     cd "research" do
-      system "bazel", "build", "--enable_bzlmod=false", "dictionary_generator"
+      system "bazel", "build", "--enable_bzlmod=false", "--enable_workspace=true", "dictionary_generator"
       bin.install "bazel-bin/dictionary_generator"
     end
   end
