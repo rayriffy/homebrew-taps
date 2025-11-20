@@ -19,8 +19,16 @@ class DictionaryGenerator < Formula
 
     # Then build dictionary_generator using Bazel
     # Note: Bazel 8 disables WORKSPACE by default, but brotli still uses it
+    # We need to use actual compilers instead of Homebrew shims for Bazel
     cd "research" do
-      system "bazel", "build", "--enable_bzlmod=false", "--enable_workspace=true", "dictionary_generator"
+      ENV.deparallelize
+      ENV["CC"] = "/usr/bin/clang"
+      ENV["CXX"] = "/usr/bin/clang++"
+      
+      system "bazel", "build", 
+             "--enable_bzlmod=false", 
+             "--enable_workspace=true",
+             "dictionary_generator"
       bin.install "bazel-bin/dictionary_generator"
     end
   end
